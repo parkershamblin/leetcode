@@ -7,6 +7,5 @@ class Solution:
         res = []
         for i in arr2:
             res += [i] * arr1.count(i)
-        for i in sorted(list(set(arr1) - set(arr2))):
-            res += [i] * arr1.count(i)
+        res = res + sorted(i for i in arr1 if i not in arr2)
         return res
