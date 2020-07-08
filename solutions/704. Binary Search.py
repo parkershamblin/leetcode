@@ -1,13 +1,10 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         
-        if len(nums) == 1:
-            if nums[0] == target: return 0
-            else: return -1
-        if len(nums) == 2:
+        if 1 <= len(nums) <= 2:
             if nums[0] == target:
                 return 0
-            elif nums[1] == target:
+            elif nums[-1] == target:
                 return 1
             
         left, mid, right = 0, len(nums) // 2, len(nums)-1
