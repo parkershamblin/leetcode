@@ -35,6 +35,7 @@ To raise an issue, click [issue](https://github.com/HUANGXUANKUN/leetcode-summar
 |1217|[Relative Sort Array](https://leetcode.com/problems/relative-sort-array)|[Python3](https://leetcode.com/submissions/detail/362603625/)|Easy|80% :heavy_check_mark: |
 |1426|[Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero)|[Python3](https://leetcode.com/submissions/detail/361888188/)|Easy|100% :heavy_check_mark: |
 |1463|[The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix)|[Python3](https://leetcode.com/submissions/detail/362567043/)|Easy|75% :heavy_check_mark: |
+|1480|[ Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|[C++](./solutions/1480.%20Running%20Sum%20of%201d%20Array.cpp)|0 ms|
 |1552|[Build an Array With Stack Operations](https://leetcode.com/problems/build-an-array-with-stack-operations)|[Python3](https://leetcode.com/submissions/detail/361620464/)|Easy|70% :heavy_check_mark: |
 |1556|[Make Two Arrays Equal by Reversing Sub-arrays](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays)|[Python3](https://leetcode.com/submissions/detail/362512540/)|Easy|66% :heavy_check_mark: |
 |1584|[Average Salary Excluding the Minimum and...](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary)|[Python3](https://leetcode.com/submissions/detail/362519706/)|Easy|100% :heavy_check_mark: |
