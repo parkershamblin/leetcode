@@ -32,6 +32,7 @@ To raise an issue, click [issue](https://github.com/HUANGXUANKUN/leetcode-summar
 |1001|[N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array)|[Python3](https://leetcode.com/submissions/detail/362148881/)|Easy|85% :heavy_check_mark: |
 |1019|[Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)|[Python3](https://leetcode.com/submissions/detail/362515875/)|Easy|100% :heavy_check_mark: |
 |1044|[Find Common Characters](https://leetcode.com/problems/find-common-characters)|[Python3](https://leetcode.com/submissions/detail/362577208/)|Easy|100% :heavy_check_mark: |
+|1108|[ Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|[C++](./solutions/1108.%20Defanging%20an%20IP%20Address.cpp)|4 ms|
 |1217|[Relative Sort Array](https://leetcode.com/problems/relative-sort-array)|[Python3](https://leetcode.com/submissions/detail/362603625/)|Easy|80% :heavy_check_mark: |
 |1426|[Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero)|[Python3](https://leetcode.com/submissions/detail/361888188/)|Easy|100% :heavy_check_mark: |
 |1463|[The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix)|[Python3](https://leetcode.com/submissions/detail/362567043/)|Easy|75% :heavy_check_mark: |
