@@ -30,6 +30,7 @@ To raise an issue, click [issue](https://github.com/HUANGXUANKUN/leetcode-summar
 |975|[Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)|[Python3](https://leetcode.com/submissions/detail/363880508/)|Easy|100% :heavy_check_mark: |
 |979|[DI String Match](https://leetcode.com/problems/di-string-match)|[Python3](https://leetcode.com/submissions/detail/363168262/)|Easy|100% :heavy_check_mark: |
 |1005|[Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree)|[Python3](https://leetcode.com/submissions/detail/365298008/)|Easy|100% :heavy_check_mark: |
+|1022|[ Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/)|[Python3](./solutions/1022.%20Sum%20of%20Root%20To%20Leaf%20Binary%20Numbers.py)|48 ms|
 |1205|[Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address)|[Cpp](https://leetcode.com/submissions/detail/364795112/)|Easy|80% :heavy_check_mark: |
 |1283|[Reformat Date](https://leetcode.com/problems/reformat-date)|[Python3](https://leetcode.com/submissions/detail/365820445/)|Easy|50% :heavy_check_mark: |
 |1603|[Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array)|[Cpp](https://leetcode.com/submissions/detail/364766734/)|Easy|53% :heavy_check_mark: |
