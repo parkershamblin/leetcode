@@ -27,6 +27,7 @@ To raise an issue, click [issue](https://github.com/HUANGXUANKUN/leetcode-summar
 |783|[Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree)|[Python3](https://leetcode.com/submissions/detail/363866232/)|Easy|50% :heavy_check_mark: |
 |792|[Binary Search](https://leetcode.com/problems/binary-search)|[Python3](https://leetcode.com/submissions/detail/364030133/)|Easy|23% :pout:|
 |822|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words)|[Python3](https://leetcode.com/submissions/detail/363819845/)|Easy|100% :heavy_check_mark: |
+|872|[ Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[Python3](./solutions/872.%20Leaf-Similar%20Trees.py)|72 ms|
 |975|[Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)|[Python3](https://leetcode.com/submissions/detail/363880508/)|Easy|100% :heavy_check_mark: |
 |979|[DI String Match](https://leetcode.com/problems/di-string-match)|[Python3](https://leetcode.com/submissions/detail/363168262/)|Easy|100% :heavy_check_mark: |
 |1005|[Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree)|[Python3](https://leetcode.com/submissions/detail/365298008/)|Easy|100% :heavy_check_mark: |
