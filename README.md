@@ -2,10 +2,6 @@
 #### Spaced-repetition is the best way to learn. 
 #### Re-attempt solved problems for better understanding.
 Update time:  2020-07-13 11:58:43
-Auto created by [leetcode_generate](https://github.com/HUANGXUANKUN/leetcode-summary-generator)
-I have solved *88* / *1515* unlocked problems
-To use this tool, click [User Guide](https://github.com/HUANGXUANKUN/leetcode-summary-generator/user-guide.md)
-To raise an issue, click [issue](https://github.com/HUANGXUANKUN/leetcode-summary-generator/issues)
                 
 | Id | Problem :question: | Lang | Difficulty | Accuracy |
 |:----:|:----:|:---:|:---:|:---:|
