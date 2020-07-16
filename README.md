@@ -1,7 +1,4 @@
 # Leetcode Summary
-#### Spaced-repetition is the best way to learn. 
-#### Re-attempt solved problems for better understanding.
-Update time:  2020-07-13 11:58:43
                 
 | Id | Problem :question: | Lang | Difficulty | Accuracy |
 |:----:|:----:|:---:|:---:|:---:|
