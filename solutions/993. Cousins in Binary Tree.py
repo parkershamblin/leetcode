@@ -4,6 +4,10 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+​
+​
+found_node = collections.namedtuple("FoundNode", "depth parent")
+​
 class Solution:
     def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
         found_nodes = []
@@ -14,11 +18,14 @@ class Solution:
                 return
             
             if node.val == x or node.val == y:
-                found_nodes.append((depth, parent))
+                found_nodes.append(found_node(depth, parent))
             
             search(node.left, node, depth+1)
             search(node.right, node, depth+1)
             
         # kick start recursive function on
         search(root, None, 0)
-        return found_nodes[0][0] == found_nodes[1][0] and found_nodes[0][1] != found_nodes[1][1]
+        # we want depth to be the same and for the parents to be different
+        return (found_nodes[0].depth == found_nodes[1].depth and
+                found_nodes[0].parent != found_nodes[1].parent)
+​
