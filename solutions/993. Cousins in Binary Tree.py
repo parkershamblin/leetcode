@@ -1,31 +1,29 @@
+# 
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-​
-​
-found_node = collections.namedtuple("FoundNode", "depth parent")
-​
 class Solution:
     def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
-        found_nodes = []
-        
-        # passes in parent and depth to keep track of things
-        def search(node: TreeNode, parent: TreeNode, depth: int):
-            if node is None:
-                return
-            
-            if node.val == x or node.val == y:
-                found_nodes.append(found_node(depth, parent))
-            
-            search(node.left, node, depth+1)
-            search(node.right, node, depth+1)
-            
-        # kick start recursive function on
-        search(root, None, 0)
-        # we want depth to be the same and for the parents to be different
-        return (found_nodes[0].depth == found_nodes[1].depth and
-                found_nodes[0].parent != found_nodes[1].parent)
-​
+        # return True if node1.depth = node2.depth and node1.parent != node2.parent
+        # traverse the tree level by level
+        current_level = [root]
+        while current_level:
+            next_level = []
+            for node in current_level:
+                if node.left: next_level.append((node.left, node.val))  # (node, parent)
+                if node.right: next_level.append((node.right, node.val))
+                if x in [node[0].val for node in next_level if node[0]]:
+                    if y in [node[0].val for node in next_level if node[0]]:
+                        for i, node in enumerate(next_level):
+                            if node[0].val == x:
+                                x_parent = node[1]
+                            elif node[0].val == y:
+                                y_parent = node[1]
+                        if x_parent != y_parent:
+                            return True
+            current_level = [node[0] for node in next_level]
+            next_level = []
+        return False
