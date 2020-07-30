@@ -7,14 +7,13 @@
 class Solution:
     def trimBST(self, root: TreeNode, L: int, R: int) -> TreeNode:
         if not root:
-            return
-        # if root.val is less than L cut off then abonden left subtree and trim right subtree
+            return None
+        if L <= root.val <= R:
+            root.left = self.trimBST(root.left, L, R)
+            root.right = self.trimBST(root.right, L, R)
         elif L > root.val:
             return self.trimBST(root.right, L, R)
-        # if root.val is more than R cut off then aboden right sub tree and trim left sub tree
         elif R < root.val:
             return self.trimBST(root.left, L, R)
-        # else recursively trim left and right sub trees
-        root.left = self.trimBST(root.left, L, R)
-        root.right = self.trimBST(root.right, L, R)
+        
         return root
