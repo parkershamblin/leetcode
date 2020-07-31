@@ -6,19 +6,23 @@
 #         self.right = right
 class Solution:
     def findTarget(self, root: TreeNode, k: int) -> bool:
-        # UPDATE negative numbers are messing with my strat trying to utilize bst property
-            # utilize bst property to efficiently solve
-        # UPDATE CONTINUED now going to generate list of all values and just check if dif + val in there 
         values = []
-        stack = [root]
-        while stack:
-            node = stack.pop()
-            values.append(node.val)
-            if node.left: stack.append(node.left)
-            if node.right: stack.append(node.right)
-​
-        for v in values:
-            dif = k - v
-            if dif in values and dif != v:
-                return True
-        return False
+        return self.dfs_preorder(root, k, values)
+    def dfs_preorder(self, root: TreeNode, k: int, values: list) -> bool:
+        # preorder prints root.val before recursive traversally of left and right subtree.
+        
+        # 1. print root.val
+        if root is None:
+            return
+        if k - root.val in values:
+            return True
+        else:
+            values.append(root.val)
+        
+        # 2. recursive traversal of left subtree
+        if self.dfs_preorder(root.left, k, values):
+            return True
+        
+        # 3. recursive traversal of right subtree
+        if self.dfs_preorder(root.right, k, values):
+            return True
