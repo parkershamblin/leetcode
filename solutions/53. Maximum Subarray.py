@@ -1,14 +1,7 @@
-class Solution(object):
-    def maxSubArray(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        n = len(nums)
-        curr_sum = max_sum = nums[0]
-        
-        for i in range(1, n):
-            curr_sum = max(nums[i], curr_sum + nums[i])
-            max_sum = max(max_sum, curr_sum)
-            
-        return max_sum
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        curMax = totalMax = nums[0]
+        for i in range(1, len(nums)):
+            curMax = max(curMax+nums[i], nums[i])
+            totalMax = max(curMax, totalMax)
+        return totalMax
