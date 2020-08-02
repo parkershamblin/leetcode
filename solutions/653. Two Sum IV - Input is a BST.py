@@ -6,23 +6,16 @@
 #         self.right = right
 class Solution:
     def findTarget(self, root: TreeNode, k: int) -> bool:
-        values = []
-        return self.dfs_preorder(root, k, values)
-    def dfs_preorder(self, root: TreeNode, k: int, values: list) -> bool:
-        # preorder prints root.val before recursive traversally of left and right subtree.
+        stack = [root]
+        seen = set()
         
-        # 1. print root.val
-        if root is None:
-            return
-        if k - root.val in values:
-            return True
-        else:
-            values.append(root.val)
-        
-        # 2. recursive traversal of left subtree
-        if self.dfs_preorder(root.left, k, values):
-            return True
-        
-        # 3. recursive traversal of right subtree
-        if self.dfs_preorder(root.right, k, values):
-            return True
+        while stack:
+            node = stack.pop()
+            if node:
+                if k - node.val in seen:
+                    return True
+                else:
+                    seen.add(node.val)
+                stack.append(node.right)
+                stack.append(node.left)
+​
