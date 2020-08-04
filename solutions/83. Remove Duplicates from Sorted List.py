@@ -5,7 +5,6 @@
 #         self.next = next
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
-        #
         cur = head
         while cur:
             next_distinct = cur.next
