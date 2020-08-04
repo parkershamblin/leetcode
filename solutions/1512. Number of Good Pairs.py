@@ -8,7 +8,7 @@ class Solution:
         """
         d = {}
         res = 0
-        for i, n in enumerate(nums):
+        for n in nums:
             if n in d:
                 res += d[n]
                 d[n] += 1
