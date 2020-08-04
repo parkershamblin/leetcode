@@ -8,3 +8,4 @@
 |104|[ Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|[Python3](./solutions/104.%20Maximum%20Depth%20of%20Binary%20Tree.py)|36 ms|
 |669|[ Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[Python3](./solutions/669.%20Trim%20a%20Binary%20Search%20Tree.py)|52 ms|
 |1046|[ Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)|[Python3](./solutions/1046.%20Last%20Stone%20Weight.py)|32 ms|
+|1528|[ Shuffle String](https://leetcode.com/problems/shuffle-string/)|[Python3](./solutions/1528.%20Shuffle%20String.py)|44 ms|
