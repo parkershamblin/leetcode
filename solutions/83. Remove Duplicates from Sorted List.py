@@ -6,7 +6,6 @@
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         cur = head
-        # tmp
         while cur:
             next_distinct = cur.next
             while next_distinct and next_distinct.val == cur.val:
