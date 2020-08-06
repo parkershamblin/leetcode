@@ -1,8 +1,9 @@
-class Solution(object):
+class Solution:
     def twoSum(self, nums, target):
-        d = {}
+        lookup = {}
         for i, n in enumerate(nums):
-            if (target - n) in d:
-                return [d[target-n], i]
+            if (target - n) in lookup:
+                return [lookup[(target - n)], i]
             else:
-                d[n] = i
+                lookup[n] = i
+​
