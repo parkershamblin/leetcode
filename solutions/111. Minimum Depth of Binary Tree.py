@@ -6,10 +6,8 @@
 #         self.right = right
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
-        if root is None:
+        if not root:
             return 0
-        if root.left is None:
-            return 1 + self.minDepth(root.right)
-        elif root.right is None:
-            return 1 + self.minDepth(root.left)
+        if not root.left or not root.right:
+            return 1 + self.minDepth(root.left) + self.minDepth(root.right)
         return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
