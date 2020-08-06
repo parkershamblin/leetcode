@@ -7,19 +7,16 @@
 class Solution:
     def binaryTreePaths(self, root: TreeNode) -> List[str]:
         res = []
-    
-        def preorder(root, path):
-            if not root:
-                return ""
-​
-            path += f"{str(root.val)}->"
-​
-            if not root.left and not root.right:
-                res.append(path[:-2])
-    
-            preorder(root.left, path)
-            preorder(root.right, path)
-        
-        # kick off recursive call on root
-        preorder(root, path="")
+        self.dfs(root, path="", res=res)
         return res
+        
+        
+    def dfs(self, node, path, res):
+        # preorder
+        if not node:
+            return None
+        path += f"{str(node.val)}->"
+        if not node.left and not node.right:
+            res.append(path[:-2])
+        self.dfs(node.left, path, res)
+        self.dfs(node.right, path, res)
