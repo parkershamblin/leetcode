@@ -14,4 +14,4 @@
 |136|[ Single Number](https://leetcode.com/problems/single-number/)|[Python3](./solutions/136.%20Single%20Number.py)|96 ms|
 |669|[ Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[Python3](./solutions/669.%20Trim%20a%20Binary%20Search%20Tree.py)|52 ms|
 |1046|[ Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)|[Python3](./solutions/1046.%20Last%20Stone%20Weight.py)|32 ms|
-|1528|[ Shuffle String](https://leetcode.com/problems/shuffle-string/)|[Python3](./solutions/1528.%20Shuffle%20String.py)|44 ms|
+|1528|[ Shuffle String](https://leetcode.com/problems/shuffle-string/)|[Python3](./solutions/1528.%20Shuffle%20String.py)|52 ms|
