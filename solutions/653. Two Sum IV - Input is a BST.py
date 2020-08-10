@@ -6,16 +6,16 @@
 #         self.right = right
 class Solution:
     def findTarget(self, root: TreeNode, k: int) -> bool:
+        lookup = set()
         stack = [root]
-        seen = set()
-        
         while stack:
             node = stack.pop()
             if node:
-                if k - node.val in seen:
+                if (k - node.val) in lookup:
                     return True
                 else:
-                    seen.add(node.val)
-                stack.append(node.right)
-                stack.append(node.left)
-​
+                    lookup.add(node.val)
+                if node.left:
+                    stack.append(node.left)
+                if node.right:
+                    stack.append(node.right)
