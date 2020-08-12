@@ -5,18 +5,17 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def sumRootToLeaf(self, root: TreeNode, val=0) -> int:
+    def sumRootToLeaf(self, root: TreeNode) -> int:
         res = []
-        self.dfs_preorder(root, val, res)
+        self.helper(root, path=0, res=res)
         return sum(res)
-            
-    def dfs_preorder(self, root: TreeNode, val=0, res: list=[]) -> str:
-        if root is None:
-            return
-        val = 2*val + root.val
-        if root.left is None and root.right is None:
-            res.append(val)
-        if root.left:
-            self.dfs_preorder(root.left, val, res)
-        if root.right:
-            self.dfs_preorder(root.right, val, res)
+​
+    def helper(self, root: TreeNode, path: int, res: list) -> None:
+        if not root:
+            return None
+        path = 2 * path + root.val
+        if not root.left and not root.right:
+            res.append(path)
+        self.helper(root.left, path, res)
+        self.helper(root.right, path, res)
+        
