@@ -1,10 +1,8 @@
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        # holy shit this soltion is bad
-        right = bisect.bisect(numbers, target)
-        for i, n in enumerate(numbers[:right+1]):
-            dif = target - n
-            if dif in numbers[:right+1]:
-                uno = numbers.pop(i)
-                dos = numbers.index(dif)
-                return [i+1, dos+2]
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        lookup = {}
+        for i, n in enumerate(numbers):
+            if (target - n) in lookup:
+                return [lookup[target - n] + 1, i + 1]  # not zero-based index
+            else:
+                lookup[n] = i
