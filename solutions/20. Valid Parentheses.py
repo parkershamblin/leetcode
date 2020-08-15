@@ -1,12 +1,11 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        hash_table = {')': '(', '}':'{', ']': '['}
         stack = []
-        lookup = {')': '(', '}': '{', ']': '['}
-        for char in s:
-            if char in lookup.values():
-                stack.append(char)
-            if char in lookup.keys():
-                if not stack or stack.pop() != lookup[char]:
+        for c in s:
+            if c in hash_table.keys():
+                if not stack or stack.pop() != hash_table[c]:
                     return False
-        if len(stack) == 0:
-            return True
+            else:
+                stack.append(c)
+        return True if len(stack) == 0 else False
