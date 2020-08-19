@@ -2,7 +2,7 @@
 #### Spaced-repetition is the best way to learn. 
 #### Re-attempt solved problems for better understanding.
 Update time:  2020-08-17 23:06:14
-I have solved *120* / *1553* unlocked problems
+I have solved *120* / *1553* unlocked problems.
                 
 | Id | Problem :question: | Lang | Difficulty | Accuracy |
 |:----:|:----:|:---:|:---:|:---:|
