@@ -6,16 +6,17 @@
 #         self.right = right
 class Solution:
     def __init__(self):
-        self.pre = -float('inf')
-        self.res = float('inf')
-    
+        self.previous = -float('inf')
+        self.result = float('inf')
+​
     def getMinimumDifference(self, root: TreeNode) -> int:
-        # inorder DFS
-        # minimum difference can only be between adjacent nodes
+        # the minimum difference will be between two adjacent nodes
+        # inorder - visit root node in between recursive traversal of left and right subtree
         if root.left:
             self.getMinimumDifference(root.left)
-        self.res = min(self.res, root.val - self.pre)
-        self.pre = root.val
+        self.result = min(self.result, root.val - self.previous)
+        self.previous = root.val
         if root.right:
             self.getMinimumDifference(root.right)
-        return self.res
+        return self.result
+​
