@@ -4,24 +4,25 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-​
-​
-from collections import namedtuple
-NodeAttributes = namedtuple('NodeAttributes', ['parent', 'depth'])
-​
-​
 class Solution:
     def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
-        lookup = {}
-        
-        stack = [(root, None, 0)]
-        while stack:
-            node, parent, depth = stack.pop()
-            if node and node.val in (x, y):
-                lookup[node.val] = NodeAttributes(parent, depth)
-            if node.left:
-                stack.append((node.left, node, depth + 1))
-            if node.right:
-                stack.append((node.right, node, depth + 1))
-        
-        return lookup[x].parent != lookup[y].parent and lookup[x].depth == lookup[y].depth
+        # intentionally taking BFS approach this time
+        # x.depth == y.depth & x.parent != y.parent
+        queue = [root]
+        while queue and root:
+            tmp = [child.val for parent in queue for child in (parent.left, parent.right) if child]
+            x_parent, y_parent = None, None
+            if x in tmp and y in tmp:
+                parents = {}
+                for parent in queue:
+                    for child in (parent.left, parent.right):
+                        if child:
+                            if child.val == x:
+                                x_parent = parent
+                            elif child.val == y:
+                                y_parent = parent
+            if x_parent and y_parent:
+                if x_parent != y_parent:
+                    return True
+            queue = [child for parent in queue for child in (parent.left, parent.right) if child]
+​
