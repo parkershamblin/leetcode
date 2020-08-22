@@ -6,16 +6,21 @@
 #         self.right = right
 class Solution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
-        p_values, q_values = [], []
-        self.dfs(p, p_values)
-        self.dfs(q, q_values)
-        return all(v1 == v2 for v1, v2 in zip(p_values, q_values))
-    
-    def dfs(self, node: TreeNode, values):
-        # preorder dfs
-        if not node:
-            values.append(None)
-        else:
-            values.append(node.val)
-            self.dfs(node.left, values)
-            self.dfs(node.right, values)
+        """For Two Trees to be the Same:
+        - node1.val must equal node2.val
+        - node1's left subtree must match node2's left subtree
+        - node1's right subtree must match node2's right subtree
+        """
+        return self.dfs(p, q)
+​
+    def dfs(self, node1, node2):
+        if not node1 and not node2:
+            return True
+        elif not node1 or not node2:
+            return False
+        
+        return (
+            node1.val == node2.val
+            and self.dfs(node1.left, node2.left)
+            and self.dfs(node1.right, node2.right)
+        )
