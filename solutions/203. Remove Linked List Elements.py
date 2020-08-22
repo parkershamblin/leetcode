@@ -6,7 +6,7 @@
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
         dummy = cur = ListNode(None)
-        cur.next = head
+        dummy.next = head
         
         while cur:
             while cur.next and cur.next.val == val:
