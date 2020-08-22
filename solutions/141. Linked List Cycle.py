@@ -6,20 +6,17 @@
 ​
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
-        fast = slow = head
+        slow = fast = head
         
-        if not head or not head.next:
+        if not head:
             return False
         
-        fast = fast.next.next
-        
-​
-        
-        while slow: # <- is this correct?
-            if slow and fast:
-                if slow.val == fast.val:
+        while fast and slow:
+            if fast.next:
+                slow = slow.next
+                fast = fast.next.next
+                if slow is fast:
                     return True
-            if not fast or not fast.next:
+            else:
                 return False
-            slow = slow.next
-            fast = fast.next.next
+​
