@@ -6,16 +6,25 @@
 #         self.right = right
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
-        queue = [root]
+        return self.dfs(root, root)
+    
+    def dfs(self, node1, node2):
+        if not node1 and not node2:
+            return True
+        elif not node1 or not node2:
+            return False
+        
+        """A tree is symmetric if the left subtree is a mirror reflection of the right subtree.
+        
+        Therefore, the question is: when are two trees a mirror reflection of each other?
+        
+        Two trees are a mirror reflection of each other if:
+        - Their two roots have the same value.
+        - The right subtree of each tree is a mirror reflection of the left subtree of other tree.
+        """
+        return (
+            node1.val == node2.val
+            and self.dfs(node1.left, node2.right)
+            and self.dfs(node1.right, node2.left)
+        )
 ​
-        while root and queue:
-            lqueue = [node.left for node in queue]
-            rqueue = [node.right for node in queue]
-            
-            if ([node.val if node else None for node in reversed(lqueue)] != 
-                  [node.val if node else None for node in rqueue]):
-                return False
-            else:
-                queue = [child for node in queue for child in (node.left, node.right) if child]
-​
-        return True
