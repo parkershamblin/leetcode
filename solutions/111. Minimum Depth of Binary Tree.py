@@ -8,14 +8,7 @@ class Solution:
     def minDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
-​
-        queue = collections.deque([(root, 1)])
-        while queue:
-            node, depth = queue.popleft()
-            if node:
-                if not node.left and not node.right:
-                    return depth
-                else:
-                    queue.append((node.left, depth + 1))
-                    queue.append((node.right, depth + 1))
-​
+        elif not root.left or not root.right:
+            return 1 + (self.minDepth(root.left) or self.minDepth(root.right))
+        else:
+            return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
