@@ -1,4 +1,3 @@
-# test
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -22,4 +21,3 @@ class Solution:
         self.result.append(root)
         if root.right:
             self.helper(root.right)
-​
