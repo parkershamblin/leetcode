@@ -5,18 +5,15 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def binaryTreePaths(self, root: TreeNode) -> List[str]:
-        res = []
-        self.dfs(root, path="", res=res)
-        return res
-        
-        
-    def dfs(self, node, path, res):
-        # preorder
-        if not node:
-            return None
-        path += f"{str(node.val)}->"
-        if not node.left and not node.right:
-            res.append(path[:-2])
-        self.dfs(node.left, path, res)
-        self.dfs(node.right, path, res)
+    def binaryTreePaths(self, root):
+        self.res = []
+        self.helper(root, "")
+        return self.res
+    
+    def helper(self, root, path):
+        if root:
+            path += f"{str(root.val)}->"
+            self.helper(root.left, path)
+            self.helper(root.right, path)
+            if not root.left and not root.right:
+                self.res.append(path[:-2])
