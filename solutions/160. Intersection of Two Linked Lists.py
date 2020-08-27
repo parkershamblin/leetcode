@@ -6,19 +6,9 @@
 ​
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-        if not headA or not headB:
-            return None
-​
-        headA_ptr = headA
-        headB_ptr = headB
+        aptr, bptr = headA, headB
         
-        if headA_ptr is headB_ptr:
-            return headA_ptr
-        
-        while headA_ptr.next or headB_ptr.next:
-            if headA_ptr is headB_ptr:
-                return headA_ptr
-            headA_ptr = headA_ptr.next if headA_ptr.next else headB
-            headB_ptr = headB_ptr.next if headB_ptr.next else headA
-            if headA_ptr is headB_ptr:
-                return headA_ptr
+        while aptr is not bptr:
+            aptr = aptr.next if aptr else headB
+            bptr = bptr.next if bptr else headA
+        return aptr
