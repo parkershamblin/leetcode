@@ -2,8 +2,10 @@ class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         dic = {}
         for string in strs:
-            if "".join(sorted(string)) in dic.keys():
-                dic["".join(sorted(string))] = dic["".join(sorted(string))] + [string]
+            key = "".join(sorted(string))
+            if key in dic.keys():
+                dic[key] = dic[key] + [string]
             else:
-                dic["".join(sorted(string))] = [string]
+                dic[key] = [string]
         return dic.values()
+​
