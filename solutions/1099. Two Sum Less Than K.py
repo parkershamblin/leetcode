@@ -1,11 +1,15 @@
 class Solution:
     def twoSumLessThanK(self, nums: List[int], k: int) -> int:
-        # Brute Force
+        # sorted O(n*log(n))
+        nums = sorted(nums)
         answer = -1
-        n = len(nums)
-        for i in range(0, n):
-            for j in range(1, n):
-                if (i != j) and (nums[i] + nums[j] <  k):
-                    answer = max(answer, nums[i] + nums[j])
+        left, right = 0, (len(nums) - 1)
+        while left < right:
+            my_sum = nums[left] + nums[right]
+            if (my_sum < k):
+                answer = max(answer, my_sum)
+                left += 1
+            else:
+                right -= 1
         return answer
 ​
